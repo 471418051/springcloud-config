@@ -29,3 +29,6 @@ eureka:
     lease-renewal-interval-in-seconds: 30
     #🌾 Eureka服务端在收到最后一次心跳后等待的时间上线,单位为秒(默认是90秒),超时将不可用服务被及时从注册中心清除
     lease-expiration-duration-in-seconds: 90
+#💟version
+message:
+  info: Config Server version_1.0
