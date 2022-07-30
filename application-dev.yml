@@ -29,4 +29,4 @@ eureka:
     lease-expiration-duration-in-seconds: 90
 #💟version
 message:
-  info: Config Server version_4.0
+  info: Config Server version_5.0
