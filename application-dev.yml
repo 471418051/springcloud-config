@@ -1,32 +1,3 @@
-spring:
-  application:
-    name: config-server
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/471418051/Always-in-my-heart.git
-          search-paths:
-            - Always-in-my-heart
-      label: master
-#💟eureka
-eureka:
-  client:
-    #💟 表示是否将自己注册进EurekaServer,默认为 true
-    register-with-eureka: true
-    #💟 是否从EurekaServer抓取已有的注册信息,默认为 true,单节点无所谓,集群必须设置为 true才能配合ribbon使用负载均衡
-    fetch-registry: true
-    service-url:
-      defaultZone: http://eureka-server:7001/eureka,http://eureka-server-clan:7002/eureka,http://eureka-server-colony:7003/eureka
-  instance:
-    #🌾 修改 eureka client 主机名
-    instance-id: config-server
-    #🌾 访问路径开启ip地址显示
-    prefer-ip-address: true
-    #🌾 Eureka客户端向服务端发送心跳的时间间隔,单位为秒(默认30秒)
-    lease-renewal-interval-in-seconds: 30
-    #🌾 Eureka服务端在收到最后一次心跳后等待的时间上线,单位为秒(默认是90秒),超时将不可用服务被及时从注册中心清除
-    lease-expiration-duration-in-seconds: 90
 #💟version
 message:
   info: Config Server version_5.2
